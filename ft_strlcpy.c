@@ -6,7 +6,7 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 13:41:00 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/27 13:48:30 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/01 00:34:27 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = -1;
-	if (dst == 0 || src == 0)
-		return (0);
 	if (dstsize == 0)
 		i++;
 	else

@@ -22,7 +22,10 @@ SRC=ft_atoi.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_strjoin.c \
+		ft_itoa.c \
+		ft_strcpy.c
 OBJS=$(SRC:.c=.o)
 
 HEADER=includes

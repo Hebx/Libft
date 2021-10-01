@@ -6,13 +6,13 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 02:06:59 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/29 02:11:37 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/09/29 20:45:42 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strdup(char *s1)
 {
 	char	*str;
 	size_t	i;

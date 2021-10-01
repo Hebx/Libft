@@ -6,13 +6,15 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 15:50:39 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/27 16:05:11 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/09/29 22:03:13 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + 'A' - 'a';
+	if ((c >= 'A') && (c <= 'Z'))
+		return (c - 'A' + 'a');
 	return (c);
 }

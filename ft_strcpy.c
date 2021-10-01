@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 16:05:26 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/29 22:03:49 by ihormi           ###   ########.fr       */
+/*   Created: 2021/10/01 06:22:14 by ihormi            #+#    #+#             */
+/*   Updated: 2021/10/01 06:30:04 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	if ((c >= 'a') && (c <= 'z'))
-		return (c - 'a' + 'A');
-	return (c);
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

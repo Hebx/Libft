@@ -6,15 +6,15 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 02:12:09 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/29 15:39:59 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/09/29 22:50:39 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*str;
+	char	*str;
 
 	str = malloc(count * size);
 	if (!str)

@@ -6,13 +6,13 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 19:01:58 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/27 12:45:00 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/01 05:21:50 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

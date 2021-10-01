@@ -6,14 +6,16 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:09:41 by ihormi            #+#    #+#             */
-/*   Updated: 2021/09/27 18:14:00 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/09/29 20:51:58 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *str, int c)
+#include "libft.h"
+
+char	*ft_strrchr(char *str, int c)
 {
-	int			i;
-	const char	*str_i;
+	int		i;
+	char	*str_i;
 
 	str_i = str;
 	i = ft_strlen(str);

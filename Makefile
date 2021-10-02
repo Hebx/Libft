@@ -27,8 +27,8 @@ SRC=ft_atoi.c \
 		ft_itoa.c \
 		ft_strcpy.c \
 		ft_substr.c
-OBJS=$(SRC:.c=.o)
 
+OBJS=$(SRC:.c=.o)
 HEADER=includes
 FOLDER=srcs
 CC=gcc

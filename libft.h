@@ -6,7 +6,7 @@
 /*   By: hebx <hebx@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 12:38:16 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/02 21:05:17 by hebx             ###   ########.fr       */
+/*   Updated: 2021/10/02 22:53:19 by hebx             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 
+typedef struct s_list{
+	void	*content;
+	struct s_list	*next;
+}t_list;
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hebx <hebx@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 12:38:16 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/02 22:53:19 by hebx             ###   ########.fr       */
+/*   Updated: 2021/10/04 02:48:02 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 
-typedef struct s_list{
-	void	*content;
-	struct s_list	*next;
-}t_list;
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
@@ -47,5 +43,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(const char *s, char c);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 
 #endif

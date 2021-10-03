@@ -26,9 +26,13 @@ SRC=ft_atoi.c \
 		ft_strjoin.c \
 		ft_itoa.c \
 		ft_strcpy.c \
-		ft_substr.c
-
+		ft_strncpy.c \
+		ft_substr.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_strncpy.c
 OBJS=$(SRC:.c=.o)
+
 HEADER=includes
 FOLDER=srcs
 CC=gcc

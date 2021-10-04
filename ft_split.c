@@ -6,7 +6,7 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 22:47:21 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/04 03:16:41 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/04 16:52:55 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	k = 0;
 	str = malloc(sizeof(char *) * (ft_ctword(s, c) + 1));
-	if (s == 0 || (!str))
-		return (0);
+	if (!s || !str)
+		return (NULL);
 	while (s[i])
 	{
 		while (s[i] == c)

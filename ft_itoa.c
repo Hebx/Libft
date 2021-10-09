@@ -6,33 +6,50 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 06:02:36 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/01 06:24:46 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/09 17:57:08 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_len(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n != 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
+	int			i;
+	int			len;
+	long int	nb;
+	char		*str;
 
-	str = malloc(sizeof(char) * 2);
+	nb = n;
+	len = ft_len(nb);
+	str = malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
-	if (n < 0)
+	str[len] = '\0';
+	i = 0;
+	if (nb < 0)
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
+		str[i++] = '-';
+		nb *= -1;
 	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
+	while (i < len)
 	{
-		str[0] = n + '0';
-		str[1] = '\0';
+		str[--len] = ('0' + (nb % 10));
+		nb = nb / 10;
 	}
 	return (str);
 }

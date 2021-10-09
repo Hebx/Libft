@@ -6,7 +6,7 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:09:41 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/03 19:08:24 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/09 00:53:50 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strrchr(char *str, int c)
 	str_i = str;
 	i = ft_strlen(str);
 	str = (str + i);
-	while (*str != *str_i && c != *str)
+	while (*str != *str_i && (char) c != *str)
 		str--;
-	if (c == *str)
+	if ((char) c == *str)
 		return ((char *)str);
 	return (0);
 }

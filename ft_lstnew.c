@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:06:46 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/03 15:47:20 by ihormi           ###   ########.fr       */
+/*   Created: 2021/10/10 16:13:49 by ihormi            #+#    #+#             */
+/*   Updated: 2021/10/10 16:15:57 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*elt;
+	t_list	*lst;
 
-	if (!(elt == (t_list *)malloc(sizeof(*elt))))
-		return (NULL);
-	elt->content = content;
-	elt->next = NULL;
-	return (elt);
+	lst = malloc(sizeof(t_list));
+	if (!lst)
+		return (0);
+	lst->content = content;
+	lst->next = 0;
+	return (lst);
 }

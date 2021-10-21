@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:06:29 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/03 15:46:06 by ihormi           ###   ########.fr       */
+/*   Created: 2021/10/11 23:16:56 by ihormi            #+#    #+#             */
+/*   Updated: 2021/10/12 01:33:47 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*new_elem;
+	t_list	*nlst;
+	t_list	*nelem;
 
-	if (!lst || !f)
+	if (lst == NULL || f == NULL)
 		return (NULL);
-	if (!(new_elem = ft_lstnew(f(lst->content))))
-	{
-		ft_lstclear(&lst, del);
+	nelem = ft_lstnew(f(lst->content));
+	if (!nelem)
 		return (NULL);
-	}
-	new_lst = new_elem;
+	nlst = nelem;
 	lst = lst->next;
-	while (lst)
+	while (lst != NULL)
 	{
-		if (!(new_elem = ft_lstnew(f(lst->content))))
+		nelem = ft_lstnew(f(lst->content));
+		if (!nelem)
 		{
-			ft_lstclear(&lst, del);
-			ft_lstclear(&new_lst, del);
-			break ;
+			ft_lstclear(&nlst, del);
+			return (NULL);
 		}
+		ft_lstadd_back(&nlst, nelem);
 		lst = lst->next;
-		ft_lstadd_back(&new_lst, new_elem);
 	}
-	return (new_lst);
+	return (nlst);
 }

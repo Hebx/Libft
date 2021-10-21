@@ -6,7 +6,7 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 22:47:21 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/09 04:52:34 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/10 13:24:26 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	char	*str;
 
 	str = (char *)malloc(sizeof(char) * n + 1);
-	if (str == NULL)
+	if (!s)
 		return (NULL);
 	str = ft_strncpy(str, s, n);
 	str[n] = '\0';
@@ -52,8 +52,10 @@ char	**ft_split(const char *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	str = malloc(sizeof(char *) * (ft_ctword(s, c) + 1));
-	if (!s || !str)
+	if (!str)
 		return (NULL);
 	while (s[i])
 	{
@@ -63,10 +65,7 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			str[k] = ft_strndup(s + j, i - j);
-			k++;
-		}
+			str[k++] = ft_strndup(s + j, i - j);
 	}
 	str[k] = NULL;
 	return (str);

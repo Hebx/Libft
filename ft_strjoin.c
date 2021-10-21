@@ -6,7 +6,7 @@
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 05:04:22 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/01 05:40:59 by ihormi           ###   ########.fr       */
+/*   Updated: 2021/10/20 04:37:07 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (str == NULL)
 		return (NULL);
 	while (s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
+		str[i++] = s1[i++];
 	while (s2[j])
 	{
 		str[i + j] = s2[j];

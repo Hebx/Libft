@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:05:45 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/03 15:06:18 by ihormi           ###   ########.fr       */
+/*   Created: 2021/10/11 21:09:49 by ihormi            #+#    #+#             */
+/*   Updated: 2021/10/11 21:13:10 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	if (lst != NULL)
+	{
+		if (lst->content != NULL && *del != NULL)
+			del(lst->content);
+		free(lst);
+	}
 }

@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihormi <ihormi@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 17:10:41 by ihormi            #+#    #+#             */
-/*   Updated: 2021/10/09 00:52:43 by ihormi           ###   ########.fr       */
+/*   Created: 2021/11/01 22:27:55 by ihormi            #+#    #+#             */
+/*   Updated: 2021/11/01 22:39:15 by ihormi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-char	*ft_strchr(const char *str, int c)
-{
-	while (*str != '\0' && (char) c != *str)
-		str++;
-	if ((char) c == *str)
-		return ((char *) str);
-	return (0);
-}
+# include "./Libft./libft.h"
+# include <signal.h>
+# include <sys/types.h>
+# include <unistd.h>
+
+void	get_pid(void);
+int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
+size_t	ft_strlen(const char *s);
+
+#endif
